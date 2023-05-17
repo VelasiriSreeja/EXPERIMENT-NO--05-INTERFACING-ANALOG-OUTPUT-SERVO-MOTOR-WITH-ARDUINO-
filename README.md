@@ -68,8 +68,30 @@ CIRCUIT DIAGRAM
 
 ### PROGRAM :
  
+#inclued <Servo.h>
 
+Serve myservo;
+int value;
+double angle;
 
+void setup()
+{
+  Serial.begin(9600);
+  myserveo.attach(9);
+}
+
+void loop()
+{
+  value = analogRead(A0)
+  angle = map(value, 0, 1023, 0, 100);
+  Serial.printin(angle);
+  myservo.write(angle);
+  delay(15);
+}
+
+### OUTPUT:
+
+![Screenshot (208)](https://github.com/VelasiriSreeja/EXPERIMENT-NO--05-INTERFACING-ANALOG-OUTPUT-SERVO-MOTOR-WITH-ARDUINO-/assets/118344328/1038e60a-f18f-46d1-b64d-834243fb5f77)
 
 
 
